@@ -19,9 +19,8 @@ function App() {
 
       const signerProvider = new ethers.BrowserProvider(window.ethereum);
       const signer = await signerProvider.getSigner(0);
-
       const contract = new Contract(
-        "0x86422d4c59e423c9099c1f1B86e229B2A974B859",
+        "0xF45b1330d99e7f88c700a255A34021C206bBD5Dd",
         factoryABI,
         signer
       );
@@ -51,7 +50,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route
           path="/combo"
-          element={<Combo contract={contract} address={address} />}
+          element={
+            <Combo contract={contract} address={address} signer={signer} />
+          }
         />
       </Routes>
     </div>

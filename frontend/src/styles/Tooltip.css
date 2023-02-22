@@ -19,12 +19,13 @@
   z-index: 99999999;
   box-sizing: border-box;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
-  display: none;
-  transition: 3s;
+  opacity: 0;
+  transition: 1s;
 }
 
 .tooltip:hover .left {
-  display: block;
+  /* display: block; */
+  opacity: 1;
 }
 
 .tooltip .left i {
