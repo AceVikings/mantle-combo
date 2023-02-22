@@ -20,7 +20,7 @@ function App() {
       const signerProvider = new ethers.BrowserProvider(window.ethereum);
       const signer = await signerProvider.getSigner(0);
       const contract = new Contract(
-        "0xF45b1330d99e7f88c700a255A34021C206bBD5Dd",
+        "0xE9A78a271970E93f211b23e893c5248850408a6D",
         factoryABI,
         signer
       );

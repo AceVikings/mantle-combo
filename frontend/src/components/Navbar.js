@@ -10,7 +10,7 @@ const Navbar = (props) => {
     <div className="navbar">
       <Link to="/" className="nav--home">
         <img className="nav--logo" src={logo} />
-        <h1>EzBots</h1>
+        <h1>EzCombo</h1>
       </Link>
 
       <ul>

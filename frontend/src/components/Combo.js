@@ -21,7 +21,7 @@ const Combo = (props) => {
 
   async function getUserCombo() {
     let combo = await contract?.userCombo(address);
-    if (combo !== ZeroAddress) {
+    if (combo !== ZeroAddress && combo) {
       setComboExist(true);
       setCombo(combo);
       let comboC = new Contract(combo, ComboABI, signer);
@@ -122,6 +122,9 @@ const Combo = (props) => {
     }
     setTransactions(tx);
   }, [count]);
+
+  console.log(contract);
+  console.log(comboExist);
   return (
     <div className="combo">
       <ToastContainer />
